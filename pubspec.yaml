@@ -1,0 +1,21 @@
+name: geofence_plugin
+description: A Geofence Flutter plugin.
+version: 0.0.1
+author: Steven Smith <stevensmith@icodeforyou.com>
+homepage:
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: com.icodeforyou.geofence_plugin
+    pluginClass: GeofencePlugin
