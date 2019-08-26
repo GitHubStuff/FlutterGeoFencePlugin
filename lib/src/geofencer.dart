@@ -99,8 +99,8 @@ class GeofencingManager {
   static Future<void> initialize() async {
     final CallbackHandle callback =
         PluginUtilities.getCallbackHandle(callbackControl);
-    await _channel.invokeMethod('GeofencingPlugin.initializeService',
-        <dynamic>[callback.toRawHandle()]);
+    await _channel
+        .invokeMethod('initializeService', <dynamic>[callback.toRawHandle()]);
   }
 
   /// Promote the geofencing service to a foreground service.

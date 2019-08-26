@@ -19,7 +19,7 @@ class GeofencePlugin: NSObject {
     private let ChannelNameCallback = "plugins.flutter.io/geofencing_plugin_background"
     private let ChannelNameMain = "plugins.flutter.io/geofencing_plugin"
     private static let GeofenceIsolate = "GeoFenceIsolate"
-    private let InitalizeService = "GeofencingPlugin.initializeService"
+    private let InitalizeService = "GeofencePlugin.initializeService"
     private let InitalizedTheService = "GeofencingPlugin.initialized"
     private let KeyEventType = "event_type"
     private let KeyRegionKey = "region"

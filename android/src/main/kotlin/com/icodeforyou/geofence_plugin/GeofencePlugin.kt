@@ -211,8 +211,10 @@ class GeofencePlugin(context: Context, activity: Activity?) : MethodCallHandler 
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     val args = call.arguments() as? ArrayList<*>
+    val method = call.method
+    Log.i("<PLUGIN>", "method:" + method)
     when(call.method) {
-      "GeofencingPlugin.initializeService" -> {
+      "GeofencePlugin.initializeService" -> {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
           activity?.requestPermissions(REQUIRED_PERMISSIONS, 12312)
         }

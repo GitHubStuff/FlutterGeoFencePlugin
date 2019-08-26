@@ -23,7 +23,7 @@ class GeofenceService : MethodChannel.MethodCallHandler, JobIntentService() {
 
     companion object {
         @JvmStatic
-        private val TAG = "GeofencingService"
+        private val TAG = "GeofenceService"
         @JvmStatic
         private val JOB_ID = UUID.randomUUID().mostSignificantBits.toInt()
         @JvmStatic
@@ -81,7 +81,7 @@ class GeofenceService : MethodChannel.MethodCallHandler, JobIntentService() {
     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
         when (call.method) {
             //
-            "GeofencingService.initialized" -> {
+            "GeofencingPlugin.initialized" -> {
                 synchronized(serviceStarted) {
                     while (!queue.isEmpty()) {
                         backgroundChannel.invokeMethod("", queue.remove())
