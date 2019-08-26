@@ -90,8 +90,7 @@ class GeofenceRegion {
 }
 
 class GeofencingManager {
-  static const MethodChannel _channel =
-      MethodChannel('plugins.flutter.io/geofencing_plugin');
+  static const MethodChannel _channel = MethodChannel('geofence_plugin');
   static const MethodChannel _background =
       MethodChannel('plugins.flutter.io/geofencing_plugin_background');
 
@@ -99,8 +98,8 @@ class GeofencingManager {
   static Future<void> initialize() async {
     final CallbackHandle callback =
         PluginUtilities.getCallbackHandle(callbackControl);
-    await _channel
-        .invokeMethod('initializeService', <dynamic>[callback.toRawHandle()]);
+    await _channel.invokeMethod(
+        'GeofencePlugin.initializeService', <dynamic>[callback.toRawHandle()]);
   }
 
   /// Promote the geofencing service to a foreground service.
